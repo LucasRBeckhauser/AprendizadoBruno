@@ -24,6 +24,8 @@ public class FuncionarioController {
         return ResponseEntity.ok().body(entity);
     }
 
+
+    //localhost:8080/api/funcionarios?page=0&size=2 para consultar por página.
     @GetMapping
     public ResponseEntity findAll (@RequestParam(defaultValue = "0")int page,
                                    @RequestParam(defaultValue = "10") int size) {
